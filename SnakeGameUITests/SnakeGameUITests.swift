@@ -6,11 +6,11 @@ final class SnakeGameUITests: XCTestCase {
 
     var app: XCUIApplication!
 
-       override func setUp() {
-           super.setUp()
-           app = XCUIApplication()
-           app.launch()
-       }
+    override func setUp() {
+        super.setUp()
+        app = XCUIApplication()
+        app.launch()
+    }
 
     func testGameUI() {
         let upButton = app.buttons["arrow.up"]
@@ -18,19 +18,19 @@ final class SnakeGameUITests: XCTestCase {
         let leftButton = app.buttons["arrow.left"]
         let rightButton = app.buttons["arrow.right"]
 
-        XCTAssertTrue(upButton.exists, "Botão para cima não encontrado")
-        XCTAssertTrue(downButton.exists, "Botão para baixo não encontrado")
-        XCTAssertTrue(leftButton.exists, "Botão para esquerda não encontrado")
-        XCTAssertTrue(rightButton.exists, "Botão para direita não encontrado")
+        XCTAssertTrue(upButton.exists, "Up button not found")
+        XCTAssertTrue(downButton.exists, "Down button not found")
+        XCTAssertTrue(leftButton.exists, "Left button not found")
+        XCTAssertTrue(rightButton.exists, "Right button not found")
     }
     
     func testSnakeVisible() {
         let snakeHead = app.otherElements["snake.head"]
-        XCTAssertTrue(snakeHead.exists, "A cabeça da cobra não está visível")
+        XCTAssertTrue(snakeHead.exists, "Snake head is not visible")
     }
 
     func testFoodVisible() {
         let food = app.otherElements["food"]
-        XCTAssertTrue(food.exists, "A comida não está visível")
+        XCTAssertTrue(food.exists, "Food is not visible")
     }
 }
