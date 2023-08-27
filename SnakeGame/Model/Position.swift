@@ -2,7 +2,7 @@
 
 import Foundation
 
-public struct Position: Equatable {
+struct Position: Equatable {
     let x: Int
     let y: Int
 }

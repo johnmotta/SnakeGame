@@ -2,6 +2,6 @@
 
 import Foundation
 
-public struct Food {
+struct Food {
     var position: Position
 }

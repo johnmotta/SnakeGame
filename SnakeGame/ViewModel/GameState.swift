@@ -2,7 +2,7 @@
 
 import SwiftUI
 
-public class GameState: ObservableObject {
+class GameState: ObservableObject {
     @Published private(set) var snake: Snake
     @Published private(set) var food: Food
     @Published var animateEat = false
@@ -68,7 +68,7 @@ public class GameState: ObservableObject {
         }
     }
     
-    public func updateFoodPosition(_ newPosition: Position) {
+    func updateFoodPosition(_ newPosition: Position) {
         food = Food(position: newPosition)
     }
 

@@ -2,6 +2,6 @@
 
 import Foundation
 
-public enum Direction {
+enum Direction {
     case up, down, left, right
 }
