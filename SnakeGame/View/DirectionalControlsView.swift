@@ -46,8 +46,13 @@ struct DirectionalControlsView: View {
     }
 }
 
-//struct DirectionalControlsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        DirectionalControlsView()
-//    }
-//}
+struct DirectionalControlsView_Previews: PreviewProvider {
+    static var previews: some View {
+        DirectionalControlsView(
+            onUp: { print("Up pressed!") },
+            onDown: { print("Down pressed!") },
+            onLeft: { print("Left pressed!") },
+            onRight: { print("Right pressed!") }
+        )
+    }
+}
